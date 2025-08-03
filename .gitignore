@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.coverage
+.mypy_cache/
+.tox/
+dist/
+build/
+*.so
+
+# Environment Variables
+.env
+.flaskenv
+
+# IDEs
+.idea/                  # JetBrains IDEs (PyCharm, IntelliJ)
+.vscode/                # VS Code (settings, launch configs)
+*.sublime-project
+*.sublime-workspace
+.project
+.DS_Store               # macOS specific
+Thumbs.db               # Windows specific
+
+# Operating System Files
+.Trash-*
+*.bak
+*.swp
+*~
+.#*
+
+# Database (if using local files/databases, e.g., SQLite)
+*.sqlite3
+*.db
+*.db-*
+data/                  # Common directory for local DB files (e.g., SQLite, or local MongoDB data if you ran mongod locally)
+
+# Logs
+logs/
+*.log
+
+# Uploaded Files / Media (if your app handles user uploads)
+uploads/
+media/
+
+# Test reports
+.pytest_cache/
+htmlcov/
+.coverage*
+
+# Jupyter Notebook (if you have any in your project)
+.ipynb_checkpoints
+
+# Docker
+*.dockerignore # The .dockerignore file itself should be versioned
+!*.dockerignore # but its rules should not be ignored.
+
+# Temp files
+*.tmp

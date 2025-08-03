@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pymongo
+redis
+crewai
+python-dotenv
+pydantic[email]
+google-generativeai
+litellm
+gunicorn
