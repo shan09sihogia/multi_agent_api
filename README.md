@@ -1,56 +1,38 @@
-🧠 Multi-Agent API (CrewAI + Gemini + FastAPI)
-A multi-agent backend using CrewAI, FastAPI, Gemini API, and Redis with multilingual query support and session-based memory.
+# 🧠 Multi-Agent Backend API (CrewAI + Gemini + FastAPI)
 
-🚀 Features
-🤖 CrewAI agents: SupportAgent, DashboardAgent
+A powerful production-ready multi-agent backend powered by **CrewAI**, **FastAPI**, **Redis**, and **Gemini API**. This system supports multilingual queries, intelligent agents, and session-based memory — all optimized for smart decision-making and fast response.
 
-🌍 Multilingual query support (via Gemini API)
+---
 
-🧠 Session-based memory (via Redis)
+## 🚀 Features
 
-⚡ FastAPI-powered REST API
+- 🤖 Two intelligent agents: `SupportAgent` and `DashboardAgent` (via CrewAI)
+- 🌍 Multilingual query support (via Google Gemini API)
+- 🧠 Session-based memory management (via Redis)
+- ⚡ RESTful APIs built using FastAPI
+- 🐳 Docker support for simple and consistent deployment
 
-🐳 Docker support for easy deployment
+---
 
-🔧 Required Environment Variables
-Add the following in a .env file or set them in your environment:
+## 📦 Tech Stack
 
-MONGO_URI
+- **Python** & **FastAPI**
+- **CrewAI** for multi-agent architecture
+- **Gemini Pro API** (Google AI)
+- **Redis (Upstash)** for context/session tracking
+- **MongoDB Atlas** as the backend database
+- **Docker** for containerization
+- **Render** for cloud deployment
 
-DB_NAME
+---
 
-REDIS_URL
+## 🌐 Live Demo
 
-GEMINI_API_KEY
+Base URL: [`https://multi-agent-api-bcev.onrender.com`](https://multi-agent-api-bcev.onrender.com)
 
-📬 API Endpoints
-GET /support/query
-GET /dashboard/query
-Query Parameters:
+Example Endpoint:
 
-q: Your natural language query
-
+```http
+GET /support/query?q=Get%20Priya%20Sharma%20details
 Headers:
-
-session-id: Unique session ID to track context
-
-Example Request:
-
-perl
-Copy
-Edit
-GET /support/query?q=Get%20priya%20sharma%20details
 session-id: abc123
-# 🐳 Docker Setup
-
-# Build image
-docker build -t multi-agent-api .
-
-# Run container with .env
-docker run -p 10000:10000 --env-file .env multi-agent-api
-# Local Deployment
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the app
-uvicorn app.main:app --reload
